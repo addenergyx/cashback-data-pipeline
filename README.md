@@ -52,9 +52,8 @@ A left join is performed on the two datasets matching each reward with its trans
 This is because rewards is missing key information such as the merchant name and transaction amount.
 - Updated schema and created new variables such as `reward_amount` and `plu_price` for analysis.
 
-[//]: # (### Instructions)
-
-[//]: # (1. Clone the repository)
+### Instructions
+1. Clone the repository
 
 [//]: # (2. Run `terraform init` to initialize the terraform directory)
 
