@@ -22,7 +22,11 @@ The automated data pipeline aims to:
 - Present a clear and user-friendly interface for tracking and analysis, empowering users with actionable financial information.
 - Serverless architecture for scalability and cost efficiency.
 
+### Dashboard
 [Dashboard](https://lookerstudio.google.com/reporting/1e51be85-1fee-4fee-b280-1349dffd0a28)
+
+![dashboard.png](static/dashboard.png)
+
 
 ### Architecture
 
