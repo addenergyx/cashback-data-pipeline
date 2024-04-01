@@ -1,0 +1,16 @@
+FROM --platform=linux/amd64 public.ecr.aws/lambda/python:3.12
+
+RUN yum -y install git
+
+RUN pip install pipenv
+
+COPY Pipfile* ./
+
+RUN pip install --upgrade cython
+RUN pip install --upgrade pip
+
+RUN pipenv install --system --deploy
+
+COPY pull_data_glue_job_lambda.py ${LAMBDA_TASK_ROOT}
+
+CMD ["pull_data_glue_job_lambda.lambda_handler"]

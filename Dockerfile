@@ -31,6 +31,6 @@ RUN pip install --upgrade pip
 
 RUN pipenv install --system --deploy
 
-COPY pull_data_glue_job_lambda.py ${LAMBDA_TASK_ROOT}
+COPY pull_data_glue_job_lambda.py api.py ${LAMBDA_TASK_ROOT}
 
 CMD ["pull_data_glue_job_lambda.lambda_handler"]
