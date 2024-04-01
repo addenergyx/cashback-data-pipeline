@@ -20,6 +20,7 @@ The automated data pipeline aims to:
 - Monitor the accrual and release of cashback rewards, ensuring users have up-to-date information.
 - Analyze spending patterns in conjunction with reward accumulation, offering insights for optimizing cashback potential.
 - Present a clear and user-friendly interface for tracking and analysis, empowering users with actionable financial information.
+- Serverless architecture for scalability and cost efficiency.
 
 [Dashboard](https://lookerstudio.google.com/reporting/1e51be85-1fee-4fee-b280-1349dffd0a28)
 
