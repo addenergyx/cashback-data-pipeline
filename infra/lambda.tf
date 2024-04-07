@@ -20,16 +20,14 @@ locals {
   ecr_image_tag       = "latest"
 }
 
-resource "aws_ecr_repository" "repo" {
-  name = local.ecr_repository_name
-}
-
 resource "aws_ecr_repository" "data_pull_ecr_repo" {
   name = "card-api-data-pull-repo"
+  force_delete = true # this is to delete the repository even if it has images in it
 }
 
 resource "aws_ecr_repository" "redshift_loader_ecr_repo" {
   name = "redshift-loader-repo"
+  force_delete = true
 }
 
 #https://hands-on.cloud/terraform-docker-lambda-example
