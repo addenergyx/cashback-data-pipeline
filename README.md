@@ -68,11 +68,18 @@ This approach guarantees that the deployment process is consistent, repeatable, 
 ### Data Ingestion
 Batch: Glue jobs and lambdas are utilized for processing raw data as batch.
 
-### Technology Stacks
+### Technology
+
+#### Infrastructure layer
+- AWS
+- Docker
+- Terraform
+
+#### Stack
 - Terraform for IaC
 - Lambdas, pyspark and glue crawler for batch processing
 - RedShift for data warehouse
-- AWS Glue for ELT and pipeline orchestration
+- AWS Glue and Step functions for ELT and pipeline orchestration
 - Looker Studio for reporting and visualization
 
 ### Data Warehouse (Redshift)
@@ -89,7 +96,7 @@ This is because rewards are missing key information such as the merchant name an
 
 ### Pre-requisites
 - AWS Account
-- AWS CLI
+- AWS CLI configured with access key and secret key in `~/.aws/credentials`
 - Docker
 - Terraform
 - Looker Account
@@ -97,10 +104,10 @@ This is because rewards are missing key information such as the merchant name an
 ### Instructions
 
 1. Clone the repository
-3. Run `make docker/build-all AWS_ECR_ACCOUNT_ID=xxx AWS_ECR_REGION=xxx` to build the docker images and push to ecr. Make sure docker is running and you have the necessary permissions to push to ecr.
-4. Run `make terraform/plan` to initialize the terraform directory and check resources to be created
-5. Run `make terraform/apply` to create the resources
-6. Go to the AWS Console > step functions and run the state machine
+2. Add your AWS Account ID and ECR region to the `Makefile`
+3. Run `make terraform/plan` to initialize the terraform directory and check resources to be created
+4. Run `make terraform/apply` to create the resources. Make sure docker is running and you have the necessary permissions to push to ecr.
+5. Go to the AWS Console > step functions and run the state machine
 6. Get Redshift endpoint and credentials from the AWS Console and sign into looker to create a connection to redshift
 
 ### Tear Down
