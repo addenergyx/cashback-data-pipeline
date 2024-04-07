@@ -87,11 +87,21 @@ A left join is performed on the two datasets matching each reward with its trans
 This is because rewards are missing key information such as the merchant name and transaction amount.
 - Performed cleaning, updated schema and created new variables such as `reward_amount` and `plu_price` for analysis downstream.
 
+### Pre-requisites
+- AWS Account
+- AWS CLI
+- Docker
+- Terraform
+- Looker Account
+
 ### Instructions
 
 1. Clone the repository
-2. Create two ecr repositories for the glue jobs `card-api-data-pull-repo` & `redshift-loader-repo` https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-create.html
 3. Run `make docker/build-all AWS_ECR_ACCOUNT_ID=xxx AWS_ECR_REGION=xxx` to build the docker images and push to ecr. Make sure docker is running and you have the necessary permissions to push to ecr.
 4. Run `make terraform/plan` to initialize the terraform directory and check resources to be created
 5. Run `make terraform/apply` to create the resources
-6. Get Redshift endpoint and credentials from the terraform output and sign into looker to create a connection to redshift
+6. Go to the AWS Console > step functions and run the state machine
+6. Get Redshift endpoint and credentials from the AWS Console and sign into looker to create a connection to redshift
+
+### Tear Down
+`make terrafrom/plan-destroy` then `make terraform/destroy`
