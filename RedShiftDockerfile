@@ -11,7 +11,6 @@ RUN pip install --upgrade pip
 
 RUN pipenv install --system --deploy
 
-COPY pull_data_glue_job_lambda.py api.py ${LAMBDA_TASK_ROOT}
-COPY transactions.csv rewards.csv ${LAMBDA_TASK_ROOT}
+COPY load_to_redshift_lambda.py .env ${LAMBDA_TASK_ROOT}
 
-CMD ["pull_data_glue_job_lambda.lambda_handler"]
+CMD ["load_to_redshift_lambda.lambda_handler"]

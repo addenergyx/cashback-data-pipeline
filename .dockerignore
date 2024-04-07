@@ -1,0 +1,4 @@
+/.terraform/*
+/glue_job/*
+/infra/*
+/static/*
