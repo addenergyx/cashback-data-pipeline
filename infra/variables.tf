@@ -32,26 +32,26 @@ variable "aws_region" {
   default     = "eu-west-1"
 }
 
-variable "card_user_id" {
-  description = "Bank account user id"
-  type        = string
-  default     = ""
-}
-
-variable "card_pass" {
-  description = "Bank account password"
-  type        = string
-  default     = ""
-}
-
-variable "card_client_id" {
-  description = "Bank account client id"
-  type        = string
-  default     = ""
-}
-
-variable "card_auth_secret" {
-  description = "Bank account auth secret"
-  type        = string
-  default     = ""
-}
+#variable "card_user_id" {
+#  description = "Bank account user id"
+#  type        = string
+#  default     = ""
+#}
+#
+#variable "card_pass" {
+#  description = "Bank account password"
+#  type        = string
+#  default     = ""
+#}
+#
+#variable "card_client_id" {
+#  description = "Bank account client id"
+#  type        = string
+#  default     = ""
+#}
+#
+#variable "card_auth_secret" {
+#  description = "Bank account auth secret"
+#  type        = string
+#  default     = ""
+#}
