@@ -19,7 +19,7 @@ resource "aws_glue_job" "glue_job_script" {
     project = var.project #optional
   }
   command {
-    name            = "glueetl"                                               #optional
+    name            = "glueetl"                                          #optional
     script_location = "s3://${var.s3_bucket}/glue-script/glue_script.py" #required
   }
   default_arguments = {
