@@ -14,19 +14,19 @@ The data pipeline collects, processes, and stores data from the payment card via
 - [Project Description](#project-description)
 - [Dashboard](#dashboard)
 - [Architecture Overview](#architecture-overview)
-- [Workflow Orchestration](#workflow-orchestration)
-- [Cloud Platform](#cloud-platform)
-- [Data Ingestion](#data-ingestion)
+  - [Workflow Orchestration](#workflow-orchestration)
+  - [Cloud Platform](#cloud-platform)
+  - [Data Ingestion](#data-ingestion)
 - [Technology](#technology)
-- [Infrastructure layer](#infrastructure-layer)
-- [Stack](#stack)
-- [Data Warehouse (Redshift)](#data-warehouse)
-- [Data Transformation (Glue/Pandas)](#data-transformation)
-- [Stack](#stack)
+  - [Infrastructure layer](#infrastructure-layer)
+  - [Stack](#stack)
+  - [Data Warehouse (Redshift)](#data-warehouse)
+  - [Data Transformation (Glue/Pandas)](#data-transformation)
+  - [Stack](#stack)
 - [Setup](#setup)
-- [Pre-requisites](#pre-requisites)
-- [Instructions](#instructions)
-- [Tear Down](#tear-down)
+  - [Pre-requisites](#pre-requisites)
+  - [Instructions](#instructions)
+  - [Tear Down](#tear-down)
 
 
 ## Architecture
@@ -131,7 +131,7 @@ This is because rewards are missing key information such as the merchant name an
 3. Run `make terraform/plan` to initialize the terraform directory and check resources to be created
 4. Run `make terraform/apply` to create the resources. Make sure docker is running and you have the necessary permissions to push to ecr.
 5. Go to the AWS Console > step functions and run the state machine
-6. Get Redshift endpoint and credentials from the AWS Console and sign into looker to create a connection to redshift
+6. Get the Redshift endpoint and credentials from the AWS Console and sign into Looker to create a connection to Redshift
 
 ### Tear Down
-`make terrafrom/plan-destroy` then `make terraform/destroy`
+`make terraform/plan-destroy` then `make terraform/destroy`
