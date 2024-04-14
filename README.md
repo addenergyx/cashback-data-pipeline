@@ -8,8 +8,13 @@ Credit card cashback rewards are a popular feature of many credit cards.
 This project is designed to provide an efficient and reliable data pipeline for analyzing credit card cashback rewards data. 
 The data pipeline collects, processes, and stores data from the payment card via an API to help identify spending and reward patterns.
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+## Table of Contents
+
+[Architecture](#architecture)
+[Project Description](#project-description)
+
+
+
 
 ## Architecture
 ![architecture.png](static/architecture.png)
