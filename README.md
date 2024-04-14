@@ -30,7 +30,7 @@ The data pipeline collects, processes, and stores data from the payment card via
 
 
 ## Architecture
-![architecture.png](static/architecture.png)
+![img.png](static/img.png)
 
 The data pipeline consists of the following components:
 1. Extract data using Open Banking API
